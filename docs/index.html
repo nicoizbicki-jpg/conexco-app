@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conexco — Gestión Comercial</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      max-width: 560px;
+      width: 100%;
+      padding: 48px 40px;
+      text-align: center;
+      box-shadow: 0 25px 50px rgba(0,0,0,.4);
+    }
+    .logo {
+      width: 72px; height: 72px;
+      background: #2563eb;
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 36px;
+    }
+    h1 { font-size: 32px; font-weight: 800; color: #f8fafc; letter-spacing: -0.5px; }
+    .subtitle { color: #94a3b8; margin-top: 8px; font-size: 16px; }
+    .badge {
+      display: inline-block;
+      background: #1e3a5f;
+      color: #60a5fa;
+      border: 1px solid #2563eb44;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      margin-top: 16px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 32px;
+      transition: background .15s;
+    }
+    .btn:hover { background: #1d4ed8; }
+    .btn svg { width: 20px; height: 20px; }
+    .steps {
+      text-align: left;
+      margin-top: 36px;
+      border-top: 1px solid #334155;
+      padding-top: 28px;
+    }
+    .steps h2 { font-size: 14px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 16px; }
+    .step { display: flex; gap: 14px; margin-bottom: 14px; }
+    .step-num {
+      flex-shrink: 0;
+      width: 26px; height: 26px;
+      background: #2563eb22;
+      border: 1px solid #2563eb55;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700; color: #60a5fa;
+    }
+    .step-text { font-size: 14px; color: #cbd5e1; line-height: 1.5; padding-top: 3px; }
+    .step-text code {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-size: 12px;
+      color: #7dd3fc;
+    }
+    .note {
+      margin-top: 24px;
+      background: #1a2744;
+      border: 1px solid #2563eb33;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: #94a3b8;
+      text-align: left;
+    }
+    .note strong { color: #60a5fa; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">⚡</div>
+    <h1>Conexco</h1>
+    <p class="subtitle">Sistema de gestión comercial para Mac</p>
+    <span class="badge">macOS · v1.1</span>
+
+    <a class="btn" href="https://github.com/nicoizbicki-jpg/conexco-app/releases/download/v1.1/Conexco.zip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 15V3m0 12-4-4m4 4 4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"/>
+      </svg>
+      Descargar para Mac
+    </a>
+
+    <div class="steps">
+      <h2>Instalación</h2>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">Descargá y descomprimí <strong>Conexco.zip</strong></div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">Mové <strong>Conexco.app</strong> a tu carpeta <strong>Aplicaciones</strong></div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          Abrí la <strong>Terminal</strong> y ejecutá:<br><br>
+          <code>xattr -cr /Applications/Conexco.app</code>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text">Hacé doble clic en la app para abrirla</div>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>Nota:</strong> La primera vez puede tardar hasta 30 segundos en conectarse. Es normal — el servidor se despierta automáticamente.
+    </div>
+  </div>
+</body>
+</html>
